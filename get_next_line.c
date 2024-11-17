@@ -6,11 +6,13 @@
 /*   By: aberenge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 03:40:06 by aberenge          #+#    #+#             */
-/*   Updated: 2024/10/27 03:40:09 by aberenge         ###   ########.fr       */
+/*   Updated: 2024/11/17 00:19:23 by aberenge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <fcntl.h>
+#include <stdio.h>
 
 char	*get_next_line(int fd)
 {
@@ -99,3 +101,12 @@ char	*ft_readline(int fd, char *storage)
 	free(buffer_to_read);
 	return (storage);
 }
+/*
+int	main(void)
+{
+	int	fd;
+
+	fd = open("test.txt", O_RDONLY);
+	printf("%s", get_next_line(fd));
+	printf("%s", get_next_line(fd));
+}*/
